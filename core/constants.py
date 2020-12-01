@@ -1,0 +1,9 @@
+CREATED = 'created'
+SUCCESS = 'success'
+FAILURE = 'failure'
+
+TRANSACTION_STATUSES = (
+    (CREATED, CREATED),
+    (SUCCESS, SUCCESS),
+    (FAILURE, FAILURE)
+)

