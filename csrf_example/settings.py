@@ -129,8 +129,8 @@ MEDIA_ROOT = '/django-csrf-attack-example/media'
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'csrf_example.authentication.CsrfExemptSessionAuthentication',
-        # 'rest_framework.authentication.SessionAuthentication',
+        # 'csrf_example.authentication.CsrfExemptSessionAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     ]
 }
 
