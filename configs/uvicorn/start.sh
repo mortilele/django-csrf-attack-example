@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME="csrf_example"                                  # Name of the application
-GIT_REPO_NAME=event_service
+GIT_REPO_NAME=django-csrf-attack-example
 DJANGODIR=~/${GIT_REPO_NAME}             # Django project directory
 SOCKFILE=~/run/uvicorn.sock  # we will communicte using this unix socket
 USER="$(whoami)"                                        # the user to run as
