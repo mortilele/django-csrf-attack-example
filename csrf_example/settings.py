@@ -117,6 +117,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/django-csrf-attack-example/static'
+MEDIA_ROOT = '/django-csrf-attack-example/media'
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
@@ -124,6 +126,7 @@ REST_FRAMEWORK = {
         'csrf_example.authentication.CsrfExemptSessionAuthentication',
     ]
 }
+
 
 CORS_ALLOW_ALL_ORIGINS = True
 SESSION_COOKIE_SAMESITE = None

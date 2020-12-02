@@ -12,6 +12,7 @@ load_dotenv()
 env.repository = "https://github.com/mortilele/django-csrf-attack-example.git"
 env.repository_ssh = "https://github.com/mortilele/django-csrf-attack-example.git"
 env.repo_name = "django-csrf-attack-example"
+env.project_name = "csrf_example"
 env.user = "root"
 # env.key_filename = "~/work/key/event_service.pem"
 env.hosts = [""]

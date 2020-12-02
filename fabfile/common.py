@@ -69,19 +69,18 @@ def build_front():
 @task
 @set_env()
 def update_supervisor():
-    sudo("cp -r ~/{0}/configs/supervisor/{1}/* /etc/supervisor/conf.d".format(env.repo_name, env.environ))
+    sudo("cp -r ~/{0}/configs/supervisor/* /etc/supervisor/conf.d".format(env.repo_name))
     sudo("""supervisorctl reread;
             supervisorctl restart {0};
-            supervisorctl restart celery;
             supervisorctl update;
             supervisorctl status;
-        """.format(env.repo_name))
+        """.format(env.project_name))
 
 
 @task
 @set_env()
 def update_nginx(first_run=0):
-    sudo("cp ~/{0}/configs/nginx/{1}/{0}.conf /etc/nginx/sites-available".format(env.repo_name, env.environ))
+    sudo("cp ~/{0}/configs/nginx/*.conf /etc/nginx/sites-available".format(env.repo_name))
     if first_run:
         sudo("ln -s /etc/nginx/sites-available/{0}.conf /etc/nginx/sites-enabled/{0}.conf".format(env.repo_name))
     sudo("service nginx restart")
