@@ -24,7 +24,7 @@ SECRET_KEY = 'b%ii_5#br+1@nej4xva(834hj469m-b3sgh!!afwfyhkz0j&w$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.38', 'localhost']
+ALLOWED_HOSTS = ['192.168.1.38', 'localhost', 'csrf.solf.io']
 
 # Application definition
 
