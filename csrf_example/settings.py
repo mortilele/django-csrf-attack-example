@@ -24,12 +24,13 @@ SECRET_KEY = 'b%ii_5#br+1@nej4xva(834hj469m-b3sgh!!afwfyhkz0j&w$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.38', 'localhost', 'csrf.solf.io']
+ALLOWED_HOSTS = ['192.168.1.38', '127.0.0.1', 'localhost', 'csrf.solf.io']
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'material.admin',
+    'material.admin.default',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -39,6 +40,11 @@ INSTALLED_APPS = [
     'core',
     'corsheaders',
 ]
+
+MATERIAL_ADMIN_SITE = {
+    'SHOW_THEMES':  True,  #  Show default admin themes button
+    'SHOW_COUNTS': True, # Show instances counts for each model
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
