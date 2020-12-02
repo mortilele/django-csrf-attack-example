@@ -3,7 +3,7 @@
 NAME="csrf_example"                                  # Name of the application
 GIT_REPO_NAME=django-csrf-attack-example
 DJANGODIR=~/${GIT_REPO_NAME}             # Django project directory
-SOCKFILE=~/run/uvicorn.sock  # we will communicte using this unix socket
+SOCKFILE=/root/run/uvicorn.sock  # we will communicte using this unix socket
 USER="$(whoami)"                                        # the user to run as
 DJANGO_SETTINGS_MODULE=csrf_example.settings             # which settings file should Django use
 DJANGO_ASGI_MODULE=csrf_example.asgi                     # WSGI module name
