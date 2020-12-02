@@ -37,5 +37,4 @@ class TransactionViewSet(mixins.ListModelMixin,
         return self.serializer_class
 
     def perform_create(self, serializer):
-        print(self.request.user)
         return serializer.save(sender_user=self.request.user)
